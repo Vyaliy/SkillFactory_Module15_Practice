@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace Task1
@@ -26,7 +27,9 @@ namespace Task1
             var IECollection = from item in classes
                              from student in item.Students
                              select student;
+            //var another = classes.SelectMany(item => item.Students);
             return IECollection.ToArray();
+
         }
 
         public class Classroom
